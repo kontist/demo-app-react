@@ -11,7 +11,6 @@ import {
 } from 'reactstrap'; // reactstrap styling components
 import {withRouter} from "react-router-dom";
 import {userService} from "../../services/user.service";
-import client from "../../mockup/client"; // Kontist SDK client
 
 const Navigation = (props) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -36,7 +35,7 @@ const Navigation = (props) => {
                         <NavbarToggler onClick={toggle}/>
                         <Collapse isOpen={isOpen} navbar>
                             <Nav className="ml-auto" navbar>
-                                <div className={"username"}>Logged in as {client.getUser().name}</div>
+                                <div className={"username"}>Logged in</div>
                                 <NavItem>
                                     <NavLink className={"linked"} onClick={() => goLogout()}>Logout</NavLink>
                                 </NavItem>

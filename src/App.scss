@@ -65,10 +65,18 @@ main {
 .transactions {
   margin: 100px;
   text-align: left;
+  .spinner-centered {
+    margin: 0 auto;
+    display: flex;
+  }
   div {
     margin-bottom: 15px;
     padding-bottom: 15px;
     border-bottom: 1px solid #eee;
+    small {
+      color: #999999;
+      padding-left: 10px;
+    }
     .amount {
       float: right;
       display: block;

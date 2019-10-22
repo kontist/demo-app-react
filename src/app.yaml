@@ -1,2 +1,4 @@
 title: MyBank
 uri: https://demo.kontist.dev
+clientId: f98e5e61-861c-4485-b032-994799046d00
+verifier: kontist-sdk-example

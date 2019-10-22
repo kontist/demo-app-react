@@ -1,7 +1,8 @@
 export const userService = {
     isAuthenticated,
     clearAuthentication,
-    mockupAuthentication
+    setToken,
+    getToken
 };
 
 const AUTH_TOKEN = "token";
@@ -14,8 +15,10 @@ function clearAuthentication() {
     sessionStorage.removeItem(AUTH_TOKEN);
 }
 
-// TODO: change to real sdk usage
-function mockupAuthentication() {
-    sessionStorage.setItem(AUTH_TOKEN, "MOCKUP");
-    return true;
+function setToken(accessToken) {
+    sessionStorage.setItem(AUTH_TOKEN, accessToken);
+}
+
+function getToken() {
+    return sessionStorage.getItem(AUTH_TOKEN);
 }
