@@ -13,12 +13,12 @@ const Transactions = (props) => {
 
     useEffect(() => {
         document.title = "Transactions";
-        kontistClient.models.transaction.fetchAll().then(function (transactions) {
-            setTransactions(transactions)
+        kontistClient.models.transaction.fetch().then(function (transactions) {
+            setTransactions(transactions.items)
         }).catch(function (error) {
             // TODO: error handling, for now just delete token and force re-authentication
             userService.clearAuthentication();
-            props.history.push("/");
+            window.location.href = "/"
         })
     }, [props]);
 

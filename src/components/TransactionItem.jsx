@@ -8,8 +8,8 @@ const formatAmount = (amount) => {
 const TransactionItem = (props) => {
     return (<div>
             <Moment format="DD.MM.YYYY">
-                {props.valutaDate}
-            </Moment> / {props.purpose}
+                {props.bookingDate}
+            </Moment> {props.purpose ? `/ ${props.purpose}` : ""}
             <span className={props.amount > 0 ? `amount` : `amount minus`}>{formatAmount(props.amount)}</span>
             <br />{props.name} <small>{props.iban}</small>
         </div>
