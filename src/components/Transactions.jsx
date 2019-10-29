@@ -12,6 +12,7 @@ const Transactions = (props) => {
     const [transactions, setTransactions ] = useState(null);
 
     useEffect(() => {
+        document.title = "Transactions";
         kontistClient.models.transaction.fetchAll().then(function (transactions) {
             setTransactions(transactions)
         }).catch(function (error) {

@@ -5,6 +5,8 @@ import {withRouter} from "react-router-dom";
 import kontistClient from "../services/kontist.service";
 
 const Authenticate = (props) => {
+    document.title = "Authentication";
+
     // Get code from url to fetch access token from api
     const search = props.location.search;
     const params = new URLSearchParams(search);
