@@ -1,4 +1,4 @@
 title: MyBank
-uri: https://demo.kontist.dev
-clientId: f98e5e61-861c-4485-b032-994799046d00
+uri: http://localhost:3000
+clientId: 58670bda-d1d1-4be8-ada2-7061deeab317
 verifier: kontist-sdk-example
