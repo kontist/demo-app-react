@@ -10,6 +10,7 @@ Before use you need to install [NodeJS](https://nodejs.org) and [yarn](https://y
 1. Clone the repository ```git clone https://github.com/kontist/demo-react-app```
 2. Execute ``yarn install`` within the target folder
 3. Start the app in development mode by running ``yarn start`` (you can find the other commands below)
+4. Open ``http://localhost:3000`` in your browser
 
 If you want to use this Demo for production use, you need to register your application [here](https://kontist.dev/console).
 
