@@ -1,10 +1,17 @@
-Kontist SDK Demo
+Kontist SDK React Demo  
 
 ## Purpose
-This Repository contains the react files for the Kontist SDK Demo.
-You can check out the Kontist JavaScript SDK [here](https://github.com/kontist/js-sdk).
+This Repository contains the react files for the Kontist SDK Demo.  
+You can check out the Kontist JavaScript SDK [here](https://github.com/kontist/js-sdk).  
+The documentation of the Kontist JavaScript SDK can be found [here](https://kontist.dev/docs/).
 
-If you want to use this Demo for production use, you need to register your application [here](https://kontist.dev/console) 
+## Installation
+Before use you need to install [NodeJS](https://nodejs.org) and [yarn](https://yarnpkg.com/).
+1. Clone the repository ```git clone https://github.com/kontist/demo-react-app```
+2. Execute ``yarn install`` within the target folder
+3. Start the app in development mode by running ``yarn start`` (you can find the other commands below)
+
+If you want to use this Demo for production use, you need to register your application [here](https://kontist.dev/console).
 
 ## Available Scripts
 
@@ -32,9 +39,3 @@ The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-## Learn More
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-The documentation of the Kontist JavaScript SDK can be found [here](https://kontist.dev/docs/).
