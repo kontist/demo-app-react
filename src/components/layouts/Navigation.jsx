@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import config from "../../app.yaml"; // import app settings
 import {
   Collapse,
@@ -11,9 +11,11 @@ import {
 } from "reactstrap"; // reactstrap styling components
 import { withRouter } from "react-router-dom";
 import { userService } from "../../services/user.service";
+import kontistClient from "../../services/kontist.service";
 
 const Navigation = props => {
   const [isOpen, setIsOpen] = useState(false);
+  const [name, setName] = useState("");
 
   const goHome = () => {
     props.history.push("/");
@@ -24,6 +26,13 @@ const Navigation = props => {
   };
 
   const toggle = () => setIsOpen(!isOpen);
+
+  // fetch firstName and lastName from Kontist API
+  useEffect(() => {
+    kontistClient.models.user.get().then(function(user) {
+      setName(`${user.firstName} ${user.lastName}`);
+    });
+  }, []);
 
   return (
     <div className={"wrapper"}>
@@ -37,7 +46,9 @@ const Navigation = props => {
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar>
               <Nav className="ml-auto" navbar>
-                <div className={"username"}>Logged in</div>
+                <div className={"username"}>
+                  {name ? `Logged in as ${name}` : ""}
+                </div>
                 <NavItem>
                   <NavLink className={"linked"} onClick={() => goLogout()}>
                     Logout
